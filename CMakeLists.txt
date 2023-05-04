@@ -8,4 +8,5 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(pktfltr main.cpp)
 
+add_subdirectory(libfilter)
 add_subdirectory(tests EXCLUDE_FROM_ALL)
