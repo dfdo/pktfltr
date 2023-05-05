@@ -6,7 +6,11 @@
 // Parse filter expression such as "ip.src == 1.2.3.0/24 && tcp" and build
 // filter object.
 
-#include "expr_parser.h"
+#ifndef PKTFLTR_FILTEREXPRESSION_H
+#define PKTFLTR_FILTEREXPRESSION_H
 
-void testFunction() {
-}
+class FilterExpression {
+
+};
+
+#endif //PKTFLTR_FILTEREXPRESSION_H

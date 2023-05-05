@@ -1,3 +1,3 @@
-add_library(libpktfltr STATIC src/expr_parser.cpp)
+add_library(libpktfltr STATIC src/FilterExpression.cpp)
 
 target_include_directories(libpktfltr PUBLIC include)

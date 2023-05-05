@@ -4,12 +4,12 @@
 // LICENSE file in the root directory of this source tree.
 
 #include <iostream>
-#include "expr_parser.h" // TEMP: header from libpktfltr can be used here
+#include "FilterExpression.h" // TEMP: header from libpktfltr can be used here
 
 int main() {
     // TEMP: to check if dependencies from libpktfltr can be used
     // in the executable successfully
-    ExpressionParser parser;
+    FilterExpression parser;
 
     std::cout << "Hello Cruel World :(" << std::endl;
     return 0;
