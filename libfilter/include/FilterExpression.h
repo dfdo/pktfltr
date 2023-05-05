@@ -9,8 +9,22 @@
 #ifndef PKTFLTR_FILTEREXPRESSION_H
 #define PKTFLTR_FILTEREXPRESSION_H
 
-class FilterExpression {
+#include <string>
+#include <utility>
 
-};
+namespace pktfltr {
+    class FilterExpression {
+    public:
+        explicit FilterExpression(std::string  filterString);
+
+        [[nodiscard]] bool isExpressionParsed() const;
+        void parseExpression();
+
+    private:
+        size_t nextToParse{}; // index of next char to parse
+        std::string filterString;
+        bool isParsingComplete{};
+    };
+}
 
 #endif //PKTFLTR_FILTEREXPRESSION_H
