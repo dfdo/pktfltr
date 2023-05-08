@@ -11,7 +11,8 @@
 #include <string>
 #include <utility>
 
-pktfltr::FilterExpression::FilterExpression(std::string  filterString) : filterString(std::move(filterString)) {}
+pktfltr::FilterExpression::FilterExpression(std::string filterString)
+        : filterString(std::move(filterString)) {}
 
 bool pktfltr::FilterExpression::isExpressionParsed() const {
     return isParsingComplete;
