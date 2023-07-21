@@ -15,5 +15,5 @@ TEST(DummyTests, SomeTestThatPass) {
 }
 
 TEST(DummyTests, SomeOtherTestThatFail) {
-    EXPECT_NE(2,3);
+    EXPECT_NE(2,2);
 }

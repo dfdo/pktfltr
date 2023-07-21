@@ -11,12 +11,12 @@
 namespace pktfltr {
     class FilterDescriptor {
     public:
-        explicit FilterDescriptor(const std::string &name);
+        explicit FilterDescriptor(std::string name);
 
     private:
         std::string name;
     public:
-        const std::string &getName() const;
+        [[nodiscard]] const std::string &getName() const;
         //TODO: bit-field for supported operators (==, !=, >, <=, neq)
         //TODO: callback for parsing the said operand(s) and build predicate
     };

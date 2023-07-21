@@ -13,15 +13,18 @@
 #include <utility>
 
 namespace pktfltr {
+    /** This class can be used to parse a filter expression (in string form)
+     * into a filter object that can be efficiently evaluated.
+     */
     class FilterExpression {
     public:
-        explicit FilterExpression(std::string  filterString);
+        explicit FilterExpression(std::string filterString);
 
         [[nodiscard]] bool isExpressionParsed() const;
         void parseExpression();
 
     private:
-        size_t nextToParse{}; // index of next char to parse
+        std::string::size_type nextToParse{}; // index of next char to parse
         std::string filterString;
         bool isParsingComplete{};
     };

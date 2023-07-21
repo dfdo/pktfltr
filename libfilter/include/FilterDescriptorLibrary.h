@@ -15,7 +15,8 @@ namespace pktfltr {
     class FilterDescriptorLibrary {
     public:
         void addFilterDescriptor(FilterDescriptor&& descriptor);
-        std::size_t getFilterCount() const;
+        [[nodiscard]] std::size_t getFilterCount() const;
+        FilterDescriptor& getFilterDescriptor(const std::string& name);
 
     private:
         std::unordered_map<std::string, FilterDescriptor> descriptorMap;

@@ -6,9 +6,10 @@
 #include "FilterDescriptor.h"
 
 #include <string>
+#include <utility>
 
-pktfltr::FilterDescriptor::FilterDescriptor(const std::string &name) : name(
-        name) {}
+pktfltr::FilterDescriptor::FilterDescriptor(std::string name) : name(std::move(
+        name)) {}
 
 const std::string &pktfltr::FilterDescriptor::getName() const {
     return name;

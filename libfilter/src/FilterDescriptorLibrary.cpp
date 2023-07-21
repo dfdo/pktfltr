@@ -16,3 +16,8 @@ void pktfltr::FilterDescriptorLibrary::addFilterDescriptor(
 std::size_t pktfltr::FilterDescriptorLibrary::getFilterCount() const {
     return descriptorMap.size();
 }
+
+pktfltr::FilterDescriptor &
+pktfltr::FilterDescriptorLibrary::getFilterDescriptor(const std::string &name) {
+    return descriptorMap.at(name);
+}
